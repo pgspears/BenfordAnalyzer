@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benford's Law Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Benford's Law Analyzer</h1>
+        <div id="controls">
+            <input type="file" id="fileInput" accept=".csv" />
+            <select id="columnSelect"></select>
+            <label for="barColor">Bar Color:</label>
+            <input type="color" id="barColor" value="#36a2eb" />
+            <label for="lineColor">Line Color:</label>
+            <input type="color" id="lineColor" value="#ff6384" />
+        </div>
+        <canvas id="chart"></canvas>
+        <div id="analysis">
+            <h2>Statistical Analysis</h2>
+            <table id="summaryTable">
+                <thead>
+                    <tr>
+                        <th>Statistic</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mean Absolute Percentage Error (MAPE)</td>
+                        <td id="mape"></td>
+                    </tr>
+                    <tr>
+                        <td>Chi-Square Test</td>
+                        <td id="chiSquare"></td>
+                    </tr>
+                    <tr>
+                        <td>Kolmogorov-Smirnov Test</td>
+                        <td id="ksTest"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="detailedExplanation">
+                <h3>Detailed Explanations</h3>
+                <p id="mapeExplanation"></p>
+                <p id="chiSquareExplanation"></p>
+                <p id="ksTestExplanation"></p>
+                <p id="explanationText"></p>
+            </div>
+        </div>
+        <div id="data-table-container">
+            <h2>Data Table</h2>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Leading Digit</th>
+                        <th>Observed Frequency</th>
+                        <th>Expected Frequency</th>
+                        <th>Difference</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="explanation">
+            <h2>What is Benford's Law?</h2>
+            <p>Benford's Law states that in many naturally occurring collections of numbers, the leading digit is likely to be small. For example, the number 1 appears as the leading digit about 30% of the time, while larger numbers appear as the leading digit with decreasing frequency.</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

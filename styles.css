@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #20232a;
+    color: #61dafb;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 80%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#controls input, #controls select, #controls label {
+    margin: 0 10px;
+    font-size: 1em;
+}
+
+canvas {
+    max-width: 100%;
+    margin: 20px 0;
+    border: 2px solid #61dafb;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+#analysis, #data-table-container, #explanation {
+    background-color: #282c34;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #f5f5f5;
+    text-align: left;
+}
+
+#data-table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #61dafb;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+td {
+    background-color: #444;
+}
+
+td.high {
+    background-color: rgba(255, 102, 102, 0.5);
+}
+
+td.low {
+    background-color: rgba(102, 255, 102, 0.5);
+}
+
+#summaryTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#summaryTable th, #summaryTable td {
+    border: 1px solid #61dafb;
+    padding: 8px;
+    text-align: center;
+}
+
+#summaryTable th {
+    background-color: #333;
+}
+
+#detailedExplanation {
+    margin-top: 20px;
+}
+
+#detailedExplanation h3 {
+    margin-bottom: 10px;
+}
+
+#detailedExplanation p {
+    margin: 10px 0;
+}
